@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.3s ease;
+}
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Cairo", sans-serif;
+}
+
+header,
+footer {
+  display: grid;
+  place-items: center;
+  height: 70px;
+}
+header {
+  background-color: #f5cd79;
+}
+footer {
+  background-color: #78e08f;
+}
+main {
+  height: calc(100vh - 140px);
+  background-color: #f8a5c2;
+  display: grid;
+  grid-template-columns: 85% 15%;
+}
+main .sidebar {
+  background-color: #3dc1d3;
+  display: grid;
+  place-items: center;
+}
+.main_content {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  width: 70%;
+  margin: 30px auto;
+  border: 1px dotted #000;
+}
+form {
+  display: grid;
+  padding: 0 30px;
+}
+form legend {
+  display: grid;
+  place-items: center;
+  height: 30px;
+  background: blue;
+  color: #fff;
+  text-transform: uppercase;
+}
+form input {
+  border: 2px solid #000;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.menu-items ul {
+  list-style-type: none;
+}
+.menu-items ul li {
+  text-align: center;
+  padding: 5px;
+  border: 1px solid #000;
+  font-size: 13px;
+  background-color: #c44569;
+}
+.menu-items ul li:hover {
+  background-color: #f8a5c2;
+}
+.submit_btns {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.submit_btns input {
+  width: 100%;
+  height: 50.5px;
+  background-color: #3dc1d3;
+  cursor: pointer;
+}
+.submit_btns input:hover {
+  background-color: #000;
+  color: #fff;
+}
+@media (max-width: 1200px) {
+  .main_content {
+    width: 90%;
+  }
+}
+@media (max-width: 467px) {
+  main .sidebar,
+  .menu-items {
+    display: none;
+  }
+  main {
+    grid-template-columns: 1fr;
+  }
+  .main_content {
+    width: 95%;
+    grid-template-columns: 1fr;
+  }
+  .submit_btns {
+    gap: 10px;
+  }
+  .submit_btns input {
+    font-size: 10px;
+  }
+}
